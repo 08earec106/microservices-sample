@@ -16,7 +16,7 @@ services:
       - consul
       - logstash
     environment:
-      - SPRING_PROFILES_ACTIVE=${profile}
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - backend
 
@@ -35,7 +35,7 @@ services:
       - consul
       - logstash
     environment:
-      - SPRING_PROFILES_ACTIVE=${profile}
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - backend
 
@@ -77,7 +77,7 @@ services:
       - consul
       - logstash
     environment:
-      - SPRING_PROFILES_ACTIVE=${profile}
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - backend
 
@@ -258,7 +258,7 @@ services:
     expose:
       - "5000"
     volumes:
-      - /Users/Shared/data/tools/logstash/:/tmp/
+      - /Users/Shared/data/tools/logstash/:/tmp/tmp_123/
     command: >
       logstash --debug -e 'input { tcp { port => 5000 codec => json { charset => "UTF-8" } } } output { elasticsearch { hosts => "elasticsearch:9200" } }'
     depends_on:
