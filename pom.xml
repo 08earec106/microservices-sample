@@ -17,6 +17,9 @@
 			<email>vijayendrap@gmail.com</email>
 			<url>https://vijayendra.mudigal.com</url>
 		</developer>
+		<developer>
+			<name>Tarun</name>
+		</developer>
 	</developers>
 
 	<parent>
